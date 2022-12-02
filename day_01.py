@@ -2,8 +2,8 @@ import heapq
 from pathlib import Path
 
 
-def part_one(input: str):
-    elf_cals = input.split("\n")
+def part_one(lines: str):
+    elf_cals = lines.split("\n")
     squashed = [0]
     current_elf = 0
     for index, cal in enumerate(elf_cals):
@@ -20,8 +20,8 @@ def part_one(input: str):
     return squashed
 
 
-def part_two(input):
-    squashed = part_one(input)
+def part_two(lines):
+    squashed = part_one(lines)
     queue = []
     for elf in squashed:
         heapq.heappush(queue, elf)
@@ -31,7 +31,7 @@ def part_two(input):
 
 
 def main():
-    file = Path(Path(__file__).parent, "input.txt")
+    file = Path("day_01.txt")
     input = file.read_text()
     part_one(input)
     part_two(input)

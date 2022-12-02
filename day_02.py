@@ -70,10 +70,11 @@ def part_two(lines: str):
 
 
 def main():
-    file = Path(Path(__file__).parent, "input.txt")
+    file = Path("day_02.txt")
     lines = file.read_text()
     part_one(lines)
     part_two(lines)
 
 
-main()
+if __name__ == '__main__':
+    main()
