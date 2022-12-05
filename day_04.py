@@ -48,6 +48,7 @@ def part_two(lines: str):
             count += 1
     return count
 
+
 def main():
     file = Path("day_04.txt")
     lines = file.read_text()
